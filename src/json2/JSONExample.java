@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package json2;
-import json2.JSONReader;
 
 import java.io.FileReader;
 import java.io.FileNotFoundException; 
@@ -67,5 +66,16 @@ public class JSONExample {
     
         ReadFromFile instace3 = new ReadFromFile();
         instace3.ReadFromFile1();
+        
+        System.out.println("This next part is just a little thing on why we need"
+                + " to parse sometimes.");
+        String numberString = "50";
+        //If you uncomment the next line of code you'll see it in red with a warning
+        //that you can't covert a string to an integer.
+        //Integer result = 22 + numberString;
+        //However, this next line does work
+        Integer result = 50 + Integer.parseInt(numberString);
+        System.out.println(result);
+        
     } 
 } 
